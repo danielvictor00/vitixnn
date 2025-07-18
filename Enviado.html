@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title> painel afirmativo </title>
+</head>
+<body>
+    <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            background-color: #b3b3b3;
+             font-family: Arial, sans-serif;
+              margin: 0;
+              padding: 0;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+                height: 100vh;
+             }
+                .container {
+                     background: white;
+                     padding: 40px;
+                     border-radius: 10px;
+                      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+                      text-align: center; }
+                h1 {
+                        color: green;
+                    }
+                        p {
+                            margin-top: 10px;
+                            color: #666;
+                        }
+                .logout-button {
+                     margin-top: 20px;
+                      padding: 10px 20px;
+                      background-color: #f44336;
+                      color:white;
+                      border: none;
+                      border-radius: 5px;
+                      cursor: pointer;
+                }
+
+
+                .logout-button:hover {
+
+
+                background-color: #d32f2f;
+
+
+                            }
+
+
+</style>
+
+
+</head>
+
+
+
+
+<div class="container">
+    <h1>Enviado com sucesso!</h1>
+    <button class="logout-button" onclick="Voltar()">VOLTAR AO INICIO</button>
+</div>
+<script>
+
+
+function Voltar() {
+
+
+window.location.href = "Paglogin.html"; // ou o nome da sua tela de login
+
+
+}
+
+
+</script>
+</body>
+</html>
