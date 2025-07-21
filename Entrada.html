@@ -2,36 +2,40 @@
 <html>
 <head>
     <style>
-        option{
-            background-color:azure;
+        option {
+            background-color: azure;
             font-size: medium;
         }
-        #principal{
-height: 500px;
-width: 500px;
-background-color: whitesmoke;
-font-size: large;
-font-family: 'Times New Roman', Times, serif;
-border-radius: 20px;
-
+        #principal {
+            height: 500px;
+            width: 500px;
+            background-color: whitesmoke;
+            font-size: large;
+            font-family: 'Times New Roman', Times, serif;
+            border-radius: 20px;
         }
-
-        body{
+        body {
             background-color: darkblue;
-        
         }
-
-        input{
+        input {
             background-color: azure;
             font-size: medium;
             border-radius: 20px;
-
-
         }
-            button{
-            background-color: azure;
+        .botao1 button {
+            background-color: greenyellow;
             font-size: medium;
             border-radius: 20px;
+            border: none;
+            cursor: pointer;
+        }
+        .botao2 button, .botao2 input[type="reset"] {
+            background-color: red;
+            font-size: medium;
+            border-radius: 20px;
+            border: none;
+            cursor: pointer;
+            color: white;
         }
     </style>
     <meta charset="UTF-8" />
@@ -39,46 +43,55 @@ border-radius: 20px;
 </head>
 <body>
     <center>
-    <div id="principal">
-    
-    <select size="" name="">
-        <option value="Serie">Selecione sua serie</option>
-        <option value="primeiro">Primeiro</option>
-        <option value="segundo">Segundo</option>
-        <option value="terceiro">Terceiro</option>
-    </select> <br><br>
+        <div id="principal">
+            <br> 
+            <h2>Preencha o campo abaixo:</h2><br>
+            <select size="1" name="serie" id="serie">
+                <option value="" disabled selected>Selecione sua série</option>
+                <option value="primeiro">Primeiro</option>
+                <option value="segundo">Segundo</option>
+                <option value="terceiro">Terceiro</option>
+            </select> 
+            <br><br>
 
-    <select size="" name="">
-        <option value="turma">Selecione sua turma</option>
-        <option value="A">A</option>
-        <option value="B">B</option>
-    </select> <br><br>
+            <select size="1" name="turma" id="turma">
+                <option value="" disabled selected>Selecione sua turma</option>
+                <option value="A">A</option>
+                <option value="B">B</option>
+            </select> 
+            <br><br>
 
-    <select size="" name="">
-        <option value="primeiro">Selecione seu curso</option>
-        <option value="Informatica">Informatica</option>
-        <option value="Redes">Redes</option>
- </select>
- <br><br>
- <h1></h1>
+            <select size="1" name="curso" id="curso">
+                <option value="" disabled selected>Selecione seu curso</option>
+                <option value="Informatica">Informática</option>
+                <option value="Redes">Redes</option>
+            </select>
+            <br><br>
 
-    Anexe aqui a imagem:<br><br>
-    <form onsubmit="return validarLogin();">
-    <input type="file" name="foto" accept="image/*"><br><br>
-    <button type="submit" value="Enviar" id="Enviar" style="color: black;"><a href="Enviado.html">Enviar</a></button>
-    <input type="reset" value="Apagar">
-</form>
-</div>
-</center>
-<script>
-    function validarLogin() {
-         const Enviar = document.getElementById("Enviar").value;
-        if (Enviar === "")
-        setTimeout(() => {
-                    window.location.href = "Enviado.html";
-                }, 1000);
-                return false;
-    }
-</script>
+            <h2>Anexe aqui a imagem:</h2><br><br>
+
+            <form onsubmit="return validarLogin();">
+                <input type="file" name="foto" accept="image/*"><br><br>
+                <div class="botao1">
+                    <button type="submit" id="Enviar">Enviar</button>
+                </div>
+
+                <div class="botao2">
+                    <input type="reset" value="Apagar">
+                </div>
+            </form>
+        </div>
+    </center>
+
+    <script>
+        function validarLogin() {
+
+            setTimeout(() => {
+                window.location.href = "Enviado.html";
+            }, 1000);
+
+            return false;
+        }
+    </script>
 </body>
 </html>
